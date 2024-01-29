@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+
+    <link rel="stylesheet" href="css/styleShowProducts.css" />
+  </head>
+  <body onload="showProductsCart()">
+  <header>
+    <div class="logo">
+      <img src="images/ram_ecommerce.png" alt="..." />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="##">About</a> </li>
+      </ul>
+  
+      <div class="cart">
+        <a href="cart.html" id="cart-link">
+          <ion-icon name="cart-outline"></ion-icon>
+          <span id="cart-Counter">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+    <div class="container">
+      <table>
+        <tbody id="Products"></tbody>
+      </table>
+    </div>
+
+    <div id="payment-button-container" style="text-align:center; width: 500px;margin: 0 auto;margin-top: 10px;"></div>
+    <script src="https://www.paypal.com/sdk/js?client-id=AQxt8UL1psfxtTOzICYwSN4ZB5_bL0dInX4pDRMHYEPYeZWXjYMQPdl1B2FGAdwzuGTj2gV36aPmSvkg
+
+    "></script>
+
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions){
+                //this function sets up the details of the transaction , including the amount
+                //and line item details
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '22.88'
+                        }
+                    }]
+                });
+            }
+        }).render('#payment-button-container')
+    </script>
+    <script src="javascript/payment.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

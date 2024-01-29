@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>  Order-Page </title>
+    <style>
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      table {
+        text-align: center;
+        margin-top: 15px;
+        font-weight: bold;
+        width: 80%;
+      }
+      table thead th {
+        text-transform: uppercase;
+        font-size: 22px;
+      }
+      #btnUpdate,
+      #btnDelete {
+        padding: 10px 20px;
+        border-radius: 17px;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 600;
+        background-color: #4e1c84;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+      #btnDelete {
+        background-color: red;
+      }
+      th,
+      td {
+        padding: 7px;
+      }
+      td {
+        font-size: 17px;
+        margin-left: 30px;
+      }
+      #tableImage {
+        height: 150px;
+        width: 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+  <header>
+    <div class="logo">
+      <img src="images/ram_ecommerce.png " alt="..." />
+    </div>
+    <nav>
+  
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="##">About</a> </li>
+      </ul>
+  
+  
+    </nav>
+  </header>
+
+    <div class="container">
+      <table>
+        <tbody id="Products"></tbody>
+      </table>
+    </div>
+
+    <link rel="stylesheet" href="css/styleShowProducts.css" />    
+    <script src="javascript/orderPage.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
